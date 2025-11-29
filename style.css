@@ -178,9 +178,9 @@ nav ul li a:hover {
 }
 
 .btn-primary {
-    background-color: #3e6ae1;
+    background-color: black;
     color: white;
-    border: none;
+    border: black;
 }
 
 .btn-secondary {
@@ -190,7 +190,9 @@ nav ul li a:hover {
 }
 
 .btn-primary:hover {
-    background-color: #3457b1;
+    background-color: white;
+    color: black;
+    border: white;
 }
 
 .btn-secondary:hover {
