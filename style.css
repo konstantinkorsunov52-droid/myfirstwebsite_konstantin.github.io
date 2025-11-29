@@ -1,0 +1,375 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Stack Sans Text", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 20px 0;
+    transition: background-color 0.3s;
+}
+
+header.scrolled {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e31937;
+}
+
+.logo span {
+    color: #fff;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    font-weight: 500;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #e31937;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+}
+
+.header-actions a {
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+.model-s {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+                url('https://voldtladekabel.de/cdn/shop/collections/Tesla_Model_S_d6749e0e-db93-4939-8822-7d3f7ea63e00.jpg?v=1686041414'); 
+}
+
+.model-3 {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+                url('https://cdn.motor1.com/images/mgl/RqMxpA/s3/tesla-model-3-standard-2026.jpg');               
+}
+
+.model-x {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+                url('https://images.prismic.io/carwow/c340a77d-af56-4562-abfb-bd5518ccb292_2023+Tesla+Model+X+front+quarter+moving.jpg?auto=format&cs=tinysrgb&fit=max&q=60');
+}
+.model-y {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+                url('https://cdn.motor1.com/images/mgl/rKE0B1/s3/tesla-model-y-2025-mit-geoffneter-heckklappe.jpg');
+}
+.cybertruck {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+                url('https://heise.cloudimg.io/width/610/q85.png-lossy-85.webp-lossy-85.foil1/_www-heise-de_/imgs/18/4/9/4/8/5/8/1/shutterstock_1634989399-dba74a568bee8313.jpeg');          
+}
+
+.vehicle-section {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 120px 0 80px;
+    text-align: center;
+}
+
+.vehicle-info h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.vehicle-info p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.specs {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 30px;
+}
+
+.spec-item {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px 25px;
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+}
+
+.spec-value {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.spec-label {
+    font-size: 14px;
+    color: #aaa;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    padding: 12px 80px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background-color: #3e6ae1;
+    color: white;
+    border: none;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: white;
+    border: 3px solid white;
+}
+
+.btn-primary:hover {
+    background-color: #3457b1;
+}
+
+.btn-secondary:hover {
+    background-color: white;
+    color: black;
+}
+
+.about {
+    padding: 100px 0;
+    background-color: #111;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-text h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+.about-image {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+footer {
+    background-color: #000;
+    padding: 50px 0 20px;
+    border-top: 1px solid #333;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #e31937;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #ccc;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #e31937;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    color: #777;
+    font-size: 14px;
+}
+
+@media (max-width: 992px) {
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .specs {
+        gap: 30px;
+    }
+
+    .btn {
+        padding: 12px 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .header-actions a:not(.menu-toggle) {
+        display: none;
+    }
+
+    .vehicle-info h1 {
+        font-size: 32px;
+    }
+
+    .specs {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 80%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .vehicle-info h1 {
+        font-size: 28px;
+    }
+
+    .vehicle-info p {
+        font-size: 16px;
+    }
+}
+
+/* external css: flickity.css */
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body { font-family: sans-serif; }
+
+.gallery {
+  background: #EEE;
+}
+
+.gallery-cell {
+  width: 66%;
+  height: 200px;
+  margin-right: 10px;
+  background: #8C8;
+  counter-increment: gallery-cell;
+}
+
+/* cell number */
+.gallery-cell:before {
+  display: block;
+  text-align: center;
+  content: counter(gallery-cell);
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+}
